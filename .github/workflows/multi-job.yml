@@ -71,9 +71,9 @@ jobs:
         run: |
           echo "Cross compiling for all platforms:"
           echo "Cross compiling for all platforms:"
-          GOOS=linux   GOARCH=amd64 go build -o main-linux-amd64 .
-          GOOS=windows GOARCH=amd64 go build -o main-windows-amd64.exe .
-          GOOS=darwin  GOARCH=amd64 go build -o main-darwin-amd64 .
+          GOOS=linux   GOARCH=amd64 go build -o main-linux-amd64 main.go
+          GOOS=windows GOARCH=amd64 go build -o main-windows-amd64.exe main.go
+          GOOS=darwin  GOARCH=amd64 go build -o main-darwin-amd64 main.go
       
       - name: list binaries
         run: ls -l
